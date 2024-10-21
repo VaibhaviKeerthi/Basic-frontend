@@ -1,0 +1,298 @@
+ /* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    color: white;
+    height: 100px; /* Adjust this height if needed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000; /* Ensures header is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for a subtle 3D effect */
+    border: solid grey;
+}
+
+/* Add margin to the top of the body content to ensure it doesn't go under the fixed header */
+body {
+    font-family: 'Lucida Sans';
+    overflow-x: hidden;
+    /* margin-top: 100px;  */
+}
+
+.logo {
+    height:100%;
+    padding-left:5%;
+    position: relative;
+    
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    padding-right: 10%;
+}
+
+#register-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 3px 5px 5px 3px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#register-button:hover {
+    background-color: coral;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 35%;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-bar .search-button {
+    color: rgb(110, 109, 109);
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content {
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 7%;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    pointer-events: none;
+    filter: brightness(80%);
+}
+.main-content button{
+    margin-left:70%;
+    padding: 1%;
+    border: none;
+    border-radius:5px;
+    color: coral;
+}
+/* Ensure the heading wraps properly */
+.main-content h1 {
+    position: relative;
+    font-size: 3rem; /* Adjust the font size as needed */
+    color: whitesmoke;
+    padding-top: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 1;
+}
+input:hover{
+  font-size: medium;
+}
+.main-content img{
+    margin-top: 6%;
+    left: 10%;
+    position: relative;
+    z-index: 1;
+    height: 60%;
+    width: 40%;
+    filter: brightness(75%);
+    filter: opacity(85%);
+    border: solid rgb(253, 100, 44);
+    border-radius:50% 5% 50% 5%;
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.pictures{
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    padding-left: 3%;
+    padding-right: 6%;
+    gap:2%;
+    justify-content: space-around;
+}
+.pictures img{
+    border: solid green 5px;
+    height: auto;
+    width: 50%;
+}
+.Targets {
+    position: relative; /* Set up positioning for the pseudo-element */
+    background-image: url('assets/signals.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    display: flex;
+    padding-left: 5%;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+/* Pseudo-element for the overlay */
+.Targets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure the overlay is below content */
+    pointer-events: none; /* Allow interactions with the content */
+}
+
+/* Ensure content is above the overlay */
+.Targets > * {
+    position: relative;
+    z-index: 2;
+}
+
+.Targets h1{
+    color: rgb(197, 197, 238);
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 35%;
+}
+.Targets ul li{
+    margin-left:15%;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.Targets img{
+ margin-top: 5%;
+ height: 100%;
+ width: 40%;
+ filter: opacity(95%);
+ border: solid rgb(150, 194, 240);
+ border-radius:5% 50% 5% 50%;
+ box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.companies {
+    margin-top: 3%;
+    text-align: center; /* Center the content inside the div */
+}
+
+.companies table {
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse; /* Optional: Collapse table borders */
+    width: 80%; /* Optional: Adjust width as needed */
+}
+.companies h1 {
+    color: rgb(6, 17, 76);
+    margin-bottom: 20px; /* Adjust the space between the <h1> and the table */
+}
+th, td {
+    padding: 10px; /* Add some padding for readability */
+    border: 1px solid #ddd; /* Optional: Add borders to cells */
+}
+
+th {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    background-color: #081d59; /* Optional: Add a background color for the header */
+}
+tr:nth-child(even) {
+    background-color: #668fd0; /* Light background color for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #bfd8f6; /* White background color for odd rows */
+}
+td a {
+    text-decoration: none;
+    color: rgb(17, 100, 151); /* Optional: Change the color of the links */
+}
+
+td a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+#footer {
+    margin-top: 3%;
+    height:max-content;
+    background-color: coral;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    padding-top: 2%;
+    padding-left: 5%;
+    color: #081d59;
+    text-align: center; /* Center align the text */
+}
+
+.footer-content p {
+    color: rgb(243, 241, 241);
+}
+
+.icons {
+    text-align: center; /* Centers the icons within their container */
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.icons a {
+    display: inline-block; /* Ensures icons are properly displayed and aligned */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.icons a:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.icons svg {
+    fill: currentColor; /* Make SVG fill color respond to text color */
+    color: #0e245f; /* Default color for icons */
+    transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+
+.icons svg:hover {
+    fill: #ffffff; /* Change color on hover */
+}
+
+p{
+    color: rgb(54, 54, 54);
+}
